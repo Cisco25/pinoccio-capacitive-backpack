@@ -1,3 +1,3 @@
-pinoccio-capacitive-backpack
+Pinoccio Capacitive Backpack
 ============================
-Contains information for the (non-official) Pinoccio capacitive backpack
+Circuit, code and information about the (non-official) Pinoccio capacitive backpack

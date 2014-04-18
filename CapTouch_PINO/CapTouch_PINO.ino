@@ -10,7 +10,7 @@
 /** http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense **/
 #include <CapacitiveSensor.h>
 
-/** Declaration of touch objects **/
+/** Creation of touch objects **/
 CapacitiveSensor   cap_P = CapacitiveSensor(0, 0);
 CapacitiveSensor   cap_I = CapacitiveSensor(0, 0);
 CapacitiveSensor   cap_N = CapacitiveSensor(0, 0);
@@ -43,14 +43,15 @@ void setup() {
 void loop() {
     Scout.loop();
     
-    /** Read capacitive eelectrodes **/
+    /** Read capacitive electrodes **/
+    /** capacitiveSensor(numberOfSamples) **/
     total_P =  cap_P.capacitiveSensor(5);
     delay(2);
-    total_I =  cap_I.capacitiveSensor(150);
+    total_I =  cap_I.capacitiveSensor(5);
     delay(2);
-    total_N =  cap_N.capacitiveSensor(10);
+    total_N =  cap_N.capacitiveSensor(5);
     delay(2);
-    total_O =  cap_O.capacitiveSensor(50);
+    total_O =  cap_O.capacitiveSensor(5);
     delay(2);
     
     /** Print measured values and turn on RGB led **/

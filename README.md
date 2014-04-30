@@ -4,7 +4,7 @@ Circuit, code and information for the Pinoccio capacitive backpack
 
 Version 1 (current)
 ----------------------------
-Cicuit: ./cap_backpack_circuit.PNG
+Cicuit: https://raw.githubusercontent.com/Cisco25/pinoccio-capacitive-backpack/master/cap_backpack_circuit.PNG
 
 To view layout and order backpack from OSH Park: http://oshpark.com/shared_projects/NBBgAHbW
 

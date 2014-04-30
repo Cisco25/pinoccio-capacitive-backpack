@@ -2,7 +2,7 @@ Pinoccio Capacitive Backpack
 ============================
 Circuit, code and information for the Pinoccio capacitive backpack
 
-VERSION 0.1
+Version 1 (current)
 ----------------------------
 
 To view layout and order backpack from OSH Park: http://oshpark.com/shared_projects/NBBgAHbW

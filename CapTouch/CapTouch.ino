@@ -64,19 +64,19 @@ void loop() {
     
     /** Read capacitive electrodes **/
     /** capacitiveSensor(numberOfSamples) **/
-    total_P =  cap_P.capacitiveSensor(2);
+    total_P =  cap_P.capacitiveSensor(5);
     //delay(2);
-    total_I =  cap_I.capacitiveSensor(150);
+    total_I =  cap_I.capacitiveSensor(5);
     //delay(2);
-    total_N =  cap_N.capacitiveSensor(10);
+    total_N =  cap_N.capacitiveSensor(5);
     //delay(2);
-    total_O =  cap_O.capacitiveSensor(50);
+    total_O =  cap_O.capacitiveSensor(5);
     //delay(2);
-    total_S0 =  cap_S0.capacitiveSensor(2);
+    total_S0 =  cap_S0.capacitiveSensor(5);
     //delay(2);
-    total_S1 =  cap_S1.capacitiveSensor(2);
+    total_S1 =  cap_S1.capacitiveSensor(5);
     //delay(2);
-    total_S2 =  cap_S2.capacitiveSensor(2);
+    total_S2 =  cap_S2.capacitiveSensor(5);
     //delay(2);
     
     /** Print measured values and turn on RGB led **/

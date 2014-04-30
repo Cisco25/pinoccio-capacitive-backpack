@@ -2,7 +2,9 @@ Pinoccio Capacitive Backpack
 ============================
 Circuit, code and information for the Pinoccio capacitive backpack
 
-To view layout and order this backpack from OSH Park: http://oshpark.com/shared_projects/NBBgAHbW
+** VERSION 0.1 **
+
+To view layout and order backpack from OSH Park: http://oshpark.com/shared_projects/NBBgAHbW
 
 To get started with P-I-N-O capacitive touches:
 - Jump 4x resistors footprints R2 to R5

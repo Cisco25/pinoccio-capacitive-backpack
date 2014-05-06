@@ -4,9 +4,9 @@ Circuit, code and information for the Pinoccio capacitive backpack
 
 Version 1 (current)
 ----------------------------
-Cicuit: https://raw.githubusercontent.com/Cisco25/pinoccio-capacitive-backpack/master/cap_backpack_circuit.PNG
+Circuit: http://tinyurl.com/kuyuprt
 
-To view layout and order backpack from OSH Park: http://oshpark.com/shared_projects/NBBgAHbW
+To view layout and order backpack from OSH Park: http://tinyurl.com/q2xaur3
 
 To get started with P-I-N-O capacitive touches:
 - Jump 4x resistors footprints R2 to R5

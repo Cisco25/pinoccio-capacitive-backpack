@@ -20,4 +20,4 @@ To get started with Slider:
 - Solder 3x 1MOhm resistors 0603 size onto C7 to C9 footprints
 - Download and install ArduinoCapSense library: http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense
 - Plug backpack and upload sketch CapTouch to scout using Arduino IDE (nightly build recommended by Pinoccio)
-- Slowly move finger up and down on slider while pressing one of the capacitive touch P, I, N or O: RGB led flashing speed changes!
+- Slowly move finger up and down on slider while pressing one of the capacitive touch P, I, N or O: RGB led brightness changes!

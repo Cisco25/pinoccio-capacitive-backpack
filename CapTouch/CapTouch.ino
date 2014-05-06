@@ -23,11 +23,11 @@ CapacitiveSensor   cap_S2 = CapacitiveSensor(0, 0);
 long total_P, total_I, total_N, total_O, total_S0, total_S1, total_S2;
 unsigned int sliderState = 0x00;
 unsigned int sliderNextState = 0x00;
-unsigned int ms = 12;
+unsigned int ton = 5000, toff = 5000;
 
 void setup() {
    Scout.setup();
-   
+
    /** Configure send and receive pins **/
    /** CapacitiveSensor(sendPin, receivePin) **/
    cap_P = CapacitiveSensor(8, A3);
@@ -138,47 +138,51 @@ void loop() {
     if(sliderState!=0) {
       switch(sliderState&0x7F) {
         case(0x01):
-          if(ms > 4)    // Decrease loop time by 2*4ms
-            ms = ms - 4;
+          if(ton > 900)    // Decrease on time by 500us
+            ton = ton - 500;
           else
-            ms = 4;
+            ton = 500;
           break;
         case(0x02):
-          if(ms > 4)    // Decrease loop time by 2*2ms
-            ms = ms - 2;
+          if(ton > 600)    // Decrease on time by 200us
+            ton = ton - 200;
           else
-            ms = 4;
+            ton = 500;
           break;
         case(0x04):
-          if(ms > 4)    // Decrease loop time by 2*1ms
-            ms = ms - 1;
+          if(ton > 500)    // Decrease on time by 100us
+            ton = ton - 100;
           else
-            ms = 4;
+            ton = 500;
           break;
          case(0x10):
-          if(ms < 100)  // Increase loop time by 2*1ms
-            ms = ms + 1;
+          if(ton < 10000)  // Increase on time by 100us
+            ton = ton + 100;
           else
-            ms = 100;
+            ton = 10000;
           break;
         case(0x20):
-          if(ms < 100)  // Increase loop time by 2*2ms
-            ms = ms + 2;
+          if(ton < 9900)  // Increase on time by 200us
+            ton = ton + 200;
           else
-            ms = 100;
+            ton = 10000;
           break;
         case(0x40):
-          if(ms < 100)  // Increase loop time by 2*4ms
-            ms = ms + 4;
+          if(ton < 9600)  // Increase on time by 500us
+            ton = ton + 500;
           else
-            ms = 100;
+            ton = 10000;
           break;
       }
-      Serial.print("ms\t");
-      Serial.println(ms);
+      toff = 10000 - ton;
+      Serial.print("ton\t");
+      Serial.print(ton);
+      Serial.print("\ttoff\t");
+      Serial.println(toff);
     }
-      
-    delay(ms);
+    
+    delayMicroseconds(ton);
     RgbLed.turnOff();
-    delay(ms);
+    if(toff)
+      delayMicroseconds(toff);
 }

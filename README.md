@@ -33,5 +33,5 @@ Slider:
 - Download and install ArduinoCapSense library: http://tinyurl.com/nphnk4c
 - Plug backpack and upload sketch CapTouch to scout using Arduino IDE (nightly build recommended by Pinoccio)
 - Slowly move finger up and down on slider while pressing one of the capacitive touch P, I, N or O: RGB led brightness changes!
-- 
+
 **********

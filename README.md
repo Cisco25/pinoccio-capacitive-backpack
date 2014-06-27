@@ -1,7 +1,7 @@
 Pinoccio Capacitive Backpack
 ============================
 Circuit, code and information for the Pinoccio capacitive backpack
-Link to Pinoccio website: http://support.pinocc.io/hc/en-us/articles/202311914-Capacitive-Touch-Backpack
+Link to Pinoccio website: [Here](http://support.pinocc.io/hc/en-us/articles/202311914-Capacitive-Touch-Backpack)
 
 Version 1 (current)
 ----------------------------
@@ -16,6 +16,7 @@ P-I-N-O touches uses following pins:
 Slider uses following pins:
  - A0, A1, A2 (Send)
  - D2 (Receive)
+
 
 ************
 **GET STARTED**

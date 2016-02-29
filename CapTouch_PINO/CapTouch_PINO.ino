@@ -15,8 +15,9 @@ CapacitiveSensor   cap_P = CapacitiveSensor(0, 0);
 CapacitiveSensor   cap_I = CapacitiveSensor(0, 0);
 CapacitiveSensor   cap_N = CapacitiveSensor(0, 0);
 CapacitiveSensor   cap_O = CapacitiveSensor(0, 0);
+CapacitiveSensor   cap_Prox = CapacitiveSensor(0, 0);
 
-long total_P, total_I, total_N, total_O;
+long total_P, total_I, total_N, total_O, total_Prox;
 
 void setup() {
    Scout.setup();
@@ -38,6 +39,10 @@ void setup() {
    cap_O = CapacitiveSensor(8, A5);
    cap_O.set_CS_AutocaL_Millis(0xFFFFFFFF);  // Turn off autocalibrate
    cap_O.set_CS_Timeout_Millis(100);         // Set Timeout to 100 ms
+
+   cap_Prox = CapacitiveSensor(8, A7);
+   cap_Prox.set_CS_AutocaL_Millis(0xFFFFFFFF);  // Turn off autocalibrate
+   cap_Prox.set_CS_Timeout_Millis(100);         // Set Timeout to 100 ms
 }
 
 void loop() {
@@ -53,29 +58,36 @@ void loop() {
     delay(2);
     total_O =  cap_O.capacitiveSensor(5);
     delay(2);
+    total_Prox = cap_Prox.capacitiveSensor(5);
+    delay(2);
     
     /** Print measured values and turn on RGB led **/
     if(total_P > 10) {
-      RgbLed.red();             // Red
+      Led.red();             // Red
       Serial.print("P\t");
       Serial.println(total_P);  // Print sensor output
     }
     else if(total_I > 10) {
-      RgbLed.green();           // Green
+      Led.green();           // Green
       Serial.print("I\t");
       Serial.println(total_I);  // Print sensor output
     }
     else if(total_N > 10) {
-      RgbLed.blue();            // Blue
+      Led.blue();            // Blue
       Serial.print("N\t");
       Serial.println(total_N);  // Print sensor output
     }
     else if(total_O > 10) {
-      RgbLed.white();           // White
+      Led.yellow();           // Yellow
       Serial.print("O\t");
       Serial.println(total_O);  // Print sensor output
     }
-    else RgbLed.turnOff();
+    else if(total_Prox > 10) {
+      Led.white();           // White
+      Serial.print("Prox\t");
+      Serial.println(total_Prox);  // Print sensor output
+    }
+    else Led.turnOff();
     
     delay(10);
 }
